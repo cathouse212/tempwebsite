@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-Service Schweiz | Ihr lokaler IT-Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-blue: #1e3a8a;
+            --swiss-red: #dc2626;
+            --steel-gray: #64748b;
+            --clean-white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(100, 116, 139, 0.85) 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .trust-badge {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .emergency-btn {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+        
+        .price-card {
+            transition: all 0.3s ease;
+        }
+        
+        .price-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .senior-card {
+            border-left: 4px solid var(--swiss-red);
+        }
+        
+        .contact-card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center mr-3">
+                        <i class="fas fa-laptop-code text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-blue-800">IT-Service Schweiz</h1>
+                        <p class="text-xs text-gray-600">Ihr lokaler IT-Partner</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-blue-800 font-medium">Dienstleistungen</a>
+                    <a href="#why" class="text-gray-700 hover:text-blue-800 font-medium">Warum wir</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-blue-800 font-medium">Preise</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-800 font-medium">Kontakt</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <a href="tel:+41000000000" class="hidden md:block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium mr-4 transition">
+                        <i class="fas fa-phone mr-2"></i>Jetzt anrufen
+                    </a>
+                    <button class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative">
+        <div class="hero-gradient py-20 md:py-28">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center text-white">
+                    <div class="inline-block bg-red-600 text-white px-4 py-1 rounded-full mb-4">
+                        <i class="fas fa-calendar-weekend mr-2"></i>Auch Samstags & Sonntags für Sie da!
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Ihr IT-Partner für die ganze Familie</h1>
+                    <p class="text-xl mb-8">Vom Rentner bis zum Kleinunternehmer - wir bieten verständliche IT-Hilfe ohne Fachchinesisch mit Geduld für alle Altersgruppen.</p>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#contact" class="bg-white text-blue-800 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-lg">
+                            Kostenlosen Hausbesuch vereinbaren
+                        </a>
+                        <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-lg emergency-btn">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>Notfall-Hilfe
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 flex flex-wrap justify-center gap-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 text-xl mr-2"></i>
+                            <span>Lokal aus der Region</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 text-xl mr-2"></i>
+                            <span>Faire Preise, keine versteckten Kosten</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 text-xl mr-2"></i>
+                            <span>Geduld mit Computer-Anfängern</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" class="fill-current text-gray-50">
+                <path d="M0,64L80,58.7C160,53,320,43,480,48C640,53,800,75,960,74.7C1120,75,1280,53,1360,42.7L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Unsere Dienstleistungen</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Wir bieten umfassende IT-Lösungen für Privatpersonen und kleine Unternehmen in der Schweiz.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop text-blue-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Computer & Laptop Hilfe</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Reparaturen und Einrichtung</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Problembehebung und OS-Upgrades</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Kaufberatung und Optimierung</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-blue-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Handy & Tablet Service</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Reparaturen und Einrichtung</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>App-Installation und Updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Datenübertragung und Sicherung</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-wifi text-blue-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Internet & Digitales</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>WLAN-Probleme und Einrichtung</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Email-Setup und Online-Banking Hilfe</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Website-Erstellung und Pflege</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-blue-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Datenrettung & Sicherheit</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Gelöschte Fotos wiederherstellen</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Viren entfernen und Schutz einrichten</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Backup-Lösungen und Datensicherung</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-chalkboard-teacher text-blue-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Schulung & Beratung</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Computer-Kurse für Anfänger</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Handy-Training und App-Nutzung</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Digitale Hilfe für Senioren</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Weekend Availability -->
+                <div class="bg-red-50 border border-red-200 rounded-xl p-6 flex flex-col items-center justify-center text-center">
+                    <div class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-calendar-weekend text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-red-600 mb-3">Weekend-Verfügbarkeit</h3>
+                    <p class="text-gray-700 mb-4">Wir sind auch Samstags und Sonntags für Sie da! Kein Problem ist zu klein oder zu groß.</p>
+                    <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded-lg transition">
+                        Termin am Wochenende buchen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why" class="py-20 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Warum uns wählen?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Wir sind Ihr zuverlässiger IT-Partner in der Schweiz mit besonderen Vorteilen</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Reason 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-clock text-blue-800 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800">7-Tage-Verfügbarkeit</h3>
+                    </div>
+                    <p class="text-gray-600">Wir sind auch Samstags und Sonntags für Sie erreichbar. Egal wann ein Problem auftritt - wir helfen schnell und zuverlässig.</p>
+                </div>
+                
+                <!-- Reason 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-home text-blue-800 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800">Hausbesuche</h3>
+                    </div>
+                    <p class="text-gray-600">Wir kommen zu Ihnen nach Hause oder ins Büro. Kein lästiges Transportieren von Geräten - wir lösen Ihre Probleme vor Ort.</p>
+                </div>
+                
+                <!-- Reason 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-comments text-blue-800 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800">Verständliche Erklärungen</h3>
+                    </div>
+                    <p class="text-gray-600">Kein Fachchinesisch! Wir erklären alles in einfachen Worten und zeigen Ihnen Schritt für Schritt, wie Sie Ihr Problem selbst lösen können.</p>
+                </div>
+                
+                <!-- Reason 4 -->
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-heart text-blue-800 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800">Geduld mit allen Altersgruppen</h3>
+                    </div>
+                    <p class="text-gray-600">Besonders für Senioren und Computer-Anfänger nehmen wir uns die nötige Zeit. Keine Frage ist zu einfach - wir helfen mit viel Geduld.</p>
+                </div>
+                
+                <!-- Reason 5 -->
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-tag text-blue-800 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800">Faire, transparente Preise</h3>
+                    </div>
+                    <p class="text-gray-600">Keine versteckten Kosten! Sie erhalten vorab eine klare Preisübersicht und zahlen nur das, was vereinbart wurde. Keine Überraschungen.</p>
+                </div>
+                
+                <!-- Reason 6 -->
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-handshake text-blue-800 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800">Kostenlose Erstberatung</h3>
+                    </div>
+                    <p class="text-gray-600">Bei Ihrem ersten Kontakt bieten wir eine kostenlose telefonische Erstberatung. So können wir Ihr Problem einschätzen und Ihnen helfen.</p>
+                </div>
+            </div>
+            
+            <!-- Target Groups -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-center text-blue-800 mb-8">Wir helfen speziell diesen Gruppen:</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Seniors -->
+                    <div class="bg-white rounded-xl p-6 shadow-md senior-card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-user-friends text-red-600"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-blue-800">Senioren</h4>
+                        </div>
+                        <p class="text-gray-600">"Geduldig und verständlich - auch bei Computer-Anfängern. Wir nehmen uns Zeit für Ihre Fragen."</p>
+                    </div>
+                    
+                    <!-- Families -->
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-home text-blue-800"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-blue-800">Familien</h4>
+                        </div>
+                        <p class="text-gray-600">"Hilfe für die ganze Familie - vom Teenager-Handy bis zum Home-Office. Ein Ansprechpartner für alle Geräte."</p>
+                    </div>
+                    
+                    <!-- Small Businesses -->
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-briefcase text-green-600"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-blue-800">Kleinunternehmer</h4>
+                        </div>
+                        <p class="text-gray-600">"Auch für kleine Firmen und Selbstständige. Wir helfen bei der Digitalisierung Ihres Unternehmens."</p>
+                    </div>
+                    
+                    <!-- Students -->
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-user-graduate text-yellow-600"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-blue-800">Studenten</h4>
+                        </div>
+                        <p class="text-gray-600">"Faire Preise für junge Leute. Spezielle Angebote für Studenten und Auszubildende."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Transparente Preise</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Kundenfreundliche Preise ohne versteckte Kosten - Sie wissen immer, was Sie bezahlen</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Individual Services -->
+                <div class="price-card bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-6 text-center">Einzelleistungen</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between border-b pb-3">
+                            <span>Hausbesuch & Diagnose</span>
+                            <span class="font-bold">CHF 80</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-3">
+                            <span>Computer-Reparatur</span>
+                            <span class="font-bold">ab CHF 120</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-3">
+                            <span>Handy-Reparatur</span>
+                            <span class="font-bold">ab CHF 80</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-3">
+                            <span>Viren entfernen</span>
+                            <span class="font-bold">CHF 150</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-3">
+                            <span>Datenrettung</span>
+                            <span class="font-bold">ab CHF 200</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-3">
+                            <span>Computer-Schulung</span>
+                            <span class="font-bold">CHF 90/Stunde</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 bg-blue-50 rounded-lg p-4">
+                        <p class="text-blue-800 font-medium">
+                            <i class="fas fa-info-circle mr-2"></i>Senior-freundliche Preise auf Anfrage verfügbar
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Package 1 -->
+                <div class="price-card bg-white rounded-xl p-8 shadow-lg border-2 border-blue-800 relative">
+                    <div class="absolute top-0 right-0 bg-blue-800 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg">
+                        Beliebt
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2 text-center">Familien-Paket</h3>
+                    <p class="text-gray-600 text-center mb-6">All-inclusive für Familien</p>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold text-blue-800">CHF 299</span>
+                        <span class="text-gray-500">/Jahr</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Bis zu 3 Hausbesuche pro Jahr</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Unbegrenzte telefonische Beratung</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Virenschutz für alle Geräte</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Datenbackup-Einrichtung</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>20% Rabatt auf Reparaturen</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-blue-800 hover:bg-blue-900 text-white text-center py-3 rounded-lg font-medium transition">
+                        Paket anfragen
+                    </a>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="price-card bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2 text-center">Senior-Paket</h3>
+                    <p class="text-gray-600 text-center mb-6">Speziell für Senioren</p>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold text-blue-800">CHF 199</span>
+                        <span class="text-gray-500">/Jahr</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Bis zu 4 Hausbesuche pro Jahr</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Unbegrenzte telefonische Beratung</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Persönliches Training (2 Stunden)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Einrichtung von Geräten</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Priorisierte Terminvergabe</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-blue-800 hover:bg-blue-900 text-white text-center py-3 rounded-lg font-medium transition">
+                        Paket anfragen
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Trust Badges -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="trust-badge bg-white rounded-lg p-4 text-center">
+                    <i class="fas fa-map-marker-alt text-blue-800 text-2xl mb-2"></i>
+                    <p class="font-medium">Lokal aus der Region</p>
+                </div>
+                <div class="trust-badge bg-white rounded-lg p-4 text-center">
+                    <i class="fas fa-sun text-yellow-500 text-2xl mb-2"></i>
+                    <p class="font-medium">Auch Sonntags erreichbar</p>
+                </div>
+                <div class="trust-badge bg-white rounded-lg p-4 text-center">
+                    <i class="fas fa-tag text-green-500 text-2xl mb-2"></i>
+                    <p class="font-medium">Faire Preise</p>
+                </div>
+                <div class="trust-badge bg-white rounded-lg p-4 text-center">
+                    <i class="fas fa-user-clock text-purple-500 text-2xl mb-2"></i>
+                    <p class="font-medium">Geduld mit Anfängern</p>
+                </div>
+                <div class="trust-badge bg-white rounded-lg p-4 text-center">
+                    <i class="fas fa-headset text-red-500 text-2xl mb-2"></i>
+                    <p class="font-medium">Kostenlose Erstberatung</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="contact-card bg-white rounded-xl p-8 md:p-12">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Kontaktieren Sie uns</h2>
+                        <p class="text-gray-600">Wir helfen Ihnen gerne weiter - auch am Wochenende!</p>
+                    </div>
+                    
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Name -->
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="name">Vor- und Nachname</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <!-- Email -->
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="email">E-Mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="phone">Telefonnummer</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <!-- Urgency -->
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="urgency">Dringlichkeit</label>
+                            <select id="urgency" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option>Normal</option>
+                                <option>Dringend</option>
+                                <option>Notfall</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Preferred Time -->
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="time">Bevorzugte Kontaktzeit</label>
+                            <select id="time" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option>Vormittag</option>
+                                <option>Nachmittag</option>
+                                <option>Abend</option>
+                                <option>Wochenende</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Home Visit -->
+                        <div>
+                            <label class="block text-gray-700 mb-2">Hausbesuch gewünscht?</label>
+                            <div class="flex space-x-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="homevisit" value="yes" class="text-blue-600">
+                                    <span class="ml-2">Ja</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="homevisit" value="no" class="text-blue-600">
+                                    <span class="ml-2">Nein</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Problem Description -->
+                        <div class="md:col-span-2">
+                            <label class="block text-gray-700 mb-2" for="problem">Problem-Beschreibung (in einfacher Sprache)</label>
+                            <textarea id="problem" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="md:col-span-2 mt-4">
+                            <button type="submit" class="w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Anfrage senden
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Contact Info -->
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                            <div>
+                                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-3">
+                                    <i class="fas fa-phone text-blue-800"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-blue-800 mb-1">Telefon</h4>
+                                <p class="text-gray-600">+41 00 000 00 00</p>
+                                <p class="text-sm text-gray-500 mt-1">Auch am Wochenende</p>
+                            </div>
+                            
+                            <div>
+                                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-3">
+                                    <i class="fas fa-envelope text-blue-800"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-blue-800 mb-1">E-Mail</h4>
+                                <p class="text-gray-600">info@itservice-schweiz.ch</p>
+                                <p class="text-sm text-gray-500 mt-1">Antwort innerhalb 24h</p>
+                            </div>
+                            
+                            <div>
+                                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-3">
+                                    <i class="fas fa-map-marker-alt text-blue-800"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-blue-800 mb-1">Region</h4>
+                                <p class="text-gray-600">Ganze Schweiz</p>
+                                <p class="text-sm text-gray-500 mt-1">Mit Hausbesuch</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">IT-Service Schweiz</h3>
+                    <p class="text-gray-300 mb-4">Ihr lokaler IT-Partner für Privatpersonen und kleine Unternehmen in der Schweiz.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dienstleistungen</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Computer & Laptop Hilfe</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Handy & Tablet Service</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Internet & Digitales</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Datenrettung & Sicherheit</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Schulung & Beratung</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-300 hover:text-white">Dienstleistungen</a></li>
+                        <li><a href="#why" class="text-gray-300 hover:text-white">Warum uns</a></li>
+                        <li><a href="#pricing" class="text-gray-300 hover:text-white">Preise</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white">Kontakt</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Datenschutz</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Footer -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Kontakt</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-gray-400"></i>
+                            <span>+41 00 000 00 00</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-gray-400"></i>
+                            <span>info@itservice-schweiz.ch</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-gray-400"></i>
+                            <span>Schweizweit mit Hausbesuch</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-gray-400"></i>
+                            <span>Mo-So: 8:00 - 20:00 Uhr</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 mt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400">&copy; 2023 IT-Service Schweiz. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/41000000000" class="fixed bottom-6 right-6 w-16 h-16 rounded-full bg-green-500 flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+
+    <script>
+        // Simple form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const problem = document.getElementById('problem').value;
+            
+            if(name && email && problem) {
+                alert('Vielen Dank für Ihre Anfrage! Wir werden uns schnellstmöglich bei Ihnen melden.');
+                this.reset();
+            } else {
+                alert('Bitte füllen Sie alle Pflichtfelder aus (Name, E-Mail und Problembeschreibung).');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
